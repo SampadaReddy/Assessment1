@@ -42,6 +42,9 @@ class _LoginPageState extends State<LoginPage> {
                           borderSide: BorderSide(color: Colors.black))),
                 ),
               ),
+			  SizedBox(
+			  height:20,
+			  ),
               Container(
                 height: 50,
                 width: MediaQuery.of(context).size.width * 0.74,
@@ -58,58 +61,23 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(
             height: 10,
           ),
-          TextFormField(
-            decoration: InputDecoration(
-                hintText: "Password",
-                suffixIcon: Icon(Icons.remove_red_eye_outlined),
-                border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8),
-                    borderSide: BorderSide(color: Colors.black))),
-          ),
-          SizedBox(
-            height: 10,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              Text(
-                "Forgot Password?",
-                style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width * 1.2,
-            height: 40,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: Colors.green.shade700),
-            child: OutlinedButton(
-              onPressed: () {
-                showAlertDialog(context);
-              },
-              child: Text(
-                "LogIn",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
-          ),
+         
+        
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text("Don't have an account?"),
-              TextButton(
+              OutlinedButton(
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => SignupPage()));
                   },
-                  child: Text("Sign Up"))
+                  child: Text("SignUp"))
+              OutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginPage()));
+                  },
+                  child: Text("Login"))
             ],
           )
         ]),
