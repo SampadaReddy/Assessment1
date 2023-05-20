@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TestPage extends StatefulWidget {
-  const TestPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  State<TestPage> createState() => _TestPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _TestPageState extends State<TestPage> {
+class _LoginPageState extends State<LoginPage> {
 @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _TestPageState extends State<TestPage> {
           ),
         
          
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
              Container(
@@ -36,7 +36,7 @@ class _TestPageState extends State<TestPage> {
                 width: MediaQuery.of(context).size.width * 0.74,
                 child: TextFormField(
                   decoration: InputDecoration(
-                      hintText: "Phone Number",
+                      hintText: "Email",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                           borderSide: BorderSide(color: Colors.black))),
@@ -47,7 +47,7 @@ class _TestPageState extends State<TestPage> {
                 width: MediaQuery.of(context).size.width * 0.74,
                 child: TextFormField(
                   decoration: InputDecoration(
-                      hintText: "Phone Number",
+                      hintText: "Password",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(8),
                           borderSide: BorderSide(color: Colors.black))),

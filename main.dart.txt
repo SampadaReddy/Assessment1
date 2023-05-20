@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       //   '/home': (context) => const HomeScreen(),
       //   '/video-call': (context) => const VideoCallScreen(),
       // },
-      home: TestsPage(),
+      home: LoginPage(),
     );
   }
 }
